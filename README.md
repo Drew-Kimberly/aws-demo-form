@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Drew-Kimberly/aws-demo-form.svg?branch=master)](https://travis-ci.org/Drew-Kimberly/aws-demo-form)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
