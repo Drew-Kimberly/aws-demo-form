@@ -1,0 +1,21 @@
+.section-container {
+    padding: 1rem;
+}
+
+.section-container h1 {
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 1rem;
+}
+
+#form-container {
+    padding-right: 5rem;
+    max-width: 40rem;
+}
+
+.submit-info {
+}
+
+#loading-spinner {
+    margin-top: 1rem;
+}
