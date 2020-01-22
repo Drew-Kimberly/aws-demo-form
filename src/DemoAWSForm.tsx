@@ -110,7 +110,7 @@ export const DemoAWSForm: React.FC = () => {
                     </Button>
                     {formikProps.isSubmitting && (
                       <pre id="loading-spinner">
-                        <Spinner className="loading-spinner" size="md" />
+                        <Spinner size="md" />
                       </pre>
                     )}
                   </ActionGroup>

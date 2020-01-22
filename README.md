@@ -1,6 +1,17 @@
 [![Build Status](https://travis-ci.org/Drew-Kimberly/aws-demo-form.svg?branch=master)](https://travis-ci.org/Drew-Kimberly/aws-demo-form)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Please view the [Available Scripts](#available-scripts) section for more information on out-of-the-box CRA react-scripts.
+
+## Development
+Clone this codebase and run `npm install && npm run start` from the project root. This will install dependencies and start
+a local development server available at `http://localhost:3000/`.
+
+## Continuous Integration
+TravisCI is used for continuous integration. The script `npm run ci` is executed against every PR / tag.
+
+Additionally when a tag/release is cut, the CI process will build a production artifact of the app using `npm run build`.
+This build will then be deployed to AWS S3.
 
 ## Available Scripts
 
@@ -38,9 +49,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
