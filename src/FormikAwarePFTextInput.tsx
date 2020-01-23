@@ -11,6 +11,7 @@ interface Props {
   isRequired?: boolean;
   validate?: FieldValidator;
   isValid?: boolean;
+  errorText?: string;
 }
 
 export const FormikAwarePFTextInput: React.FC<Props> = (props: Props) => {
@@ -30,6 +31,8 @@ export const FormikAwarePFTextInput: React.FC<Props> = (props: Props) => {
             isRequired={props.isRequired}
             fieldId={props.id}
             helperText={props.helpText}
+            isValid={props.isValid}
+            helperTextInvalid={props.errorText}
           >
             <TextInput
               value={fieldProps.field.value}

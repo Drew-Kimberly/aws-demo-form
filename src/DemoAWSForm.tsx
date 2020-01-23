@@ -60,6 +60,7 @@ export const DemoAWSForm: React.FC = () => {
                     isValid={
                       !(formikProps.errors.name && formikProps.touched.name)
                     }
+                    errorText="Name is required"
                   />
                   <FormikAwarePFTextInput
                     id="age"
