@@ -1,7 +1,8 @@
 {
-  "name": "project1",
-  "version": "0.1.0",
+  "name": "aws-demo-form",
+  "version": "1.0",
   "private": true,
+  "author": "Drew Kimberly [andrew.e.kimberly@gmail.com]",
   "dependencies": {
     "@patternfly/react-core": "^3.129.3",
     "formik": "^2.1.2",

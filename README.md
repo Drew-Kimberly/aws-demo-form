@@ -12,7 +12,7 @@ TravisCI is used for continuous integration. The script `npm run ci` is executed
 
 Additionally when a tag/release is cut, the CI process will build a production artifact of the app using `npm run build`.
 This build will then be deployed to AWS S3 using TravisCI's built-in S3 Deployment provider. The AWS CloudFront cache will
-also be invalidated by using the (travis-ci-cloudfront-invalidation)[https://github.com/alexpatow/travis-ci-cloudfront-invalidation] NPM library.
+also be invalidated by using the [travis-ci-cloudfront-invalidation](https://github.com/alexpatow/travis-ci-cloudfront-invalidation) NPM library.
 
 ## Available Scripts
 
