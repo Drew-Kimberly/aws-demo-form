@@ -5,11 +5,29 @@ cache:
   directories:
     - node_modules
 
+notifications:
+  email:
+    - recipients:
+      - andrew.e.kimberly@gmail.com
+
 install:
   - npm install
-
-before_script:
-  - npm run ci
+  - npm install -g travis-ci-cloudfront-invalidation
+  - npm run build
 
 script:
-  - npm run build
+  - npm run ci
+
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: "demo-aws-form"
+  skip_cleanup: true
+  region: "us-east-1"
+  local_dir: build
+  on:
+    tags: true
+
+after_deploy:
+  - travis-ci-cloudfront-invalidation -a $AWS_ACCESS_KEY -s $AWS_SECRET_ACCESS_KEY -c $AWSCF_ID -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
